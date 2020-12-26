@@ -1,0 +1,36 @@
+{
+  "name": "xperthunt-be",
+  "version": "1.0.0",
+  "private": true,
+  "author": "ozgeonec",
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "express-favicon": "^2.0.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.1",
+    "http-errors": "~1.6.3",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.8",
+    "mongoose-algolia": "^1.10.1",
+    "mongoose-deep-populate": "^3.2.0",
+    "mongoose-gridfs": "^1.2.48",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.6",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.0.1",
+    "pug": "^3.0.0",
+    "validator": "^13.5.1"
+  }
+}
