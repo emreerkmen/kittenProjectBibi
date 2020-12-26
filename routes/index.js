@@ -49,7 +49,7 @@ router.post('/signup', async function (req,res,next){
 router.post('/login', passport.authenticate('local-login', {
   successRedirect : '/profile', // redirect to the secure profile section
   failureRedirect : '/profile2', // redirect back to the signup page if there is an error
-  failureFlash : true // allow flash messages
+  //failureFlash : true // allow flash messages
 }),function (req,res){
   console.log(req);
   console.log(res);
@@ -83,10 +83,7 @@ router.get('/checkauth', passportConfig.isAuthenticated, function(req, res){
 
 /* PROFILE ROUTE */
 router.get('/profile', (req, res, next) => {
-  console.log(req)
-  console.log("hello");
-  console.log(req.user);
-  res.json({ greeting: 'hello API' });
+  res.json({ greeting: 'login is success' });
 });
 
 /* PROFILE ROUTE */

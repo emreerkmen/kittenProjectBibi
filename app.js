@@ -32,19 +32,19 @@ mongoose.set("useCreateIndex", true);
 });*/
 
 /* CORS Settings*/
-app.use(function (req, res, next) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+/*app.use(function (req, res, next) {
+  //res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Credentials", "true");
   res.setHeader(
     "Access-Control-Allow-Methods",
     "GET,HEAD,OPTIONS,POST,PUT,DELETE"
   );
-  res.setHeader("Access-Control-Allow-Headers", "*");
+  res.setHeader("Access-Control-Allow-Headers", "*");//"Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
   next();
-});
+});*/
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -55,7 +55,7 @@ app.use("/home", indexRouter);
 app.use("/signup", indexRouter);
 
 app.use(express.static(path.join(__dirname, "public")));
-app.use(cors());
+app.use(cors({credentials: true,origin:"http://localhost:3000"}));
 app.use(cookieParser());
 app.use(
   session({
